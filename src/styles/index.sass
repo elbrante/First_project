@@ -1,0 +1,1601 @@
+//макет сделан для 1920 и 375. Резиновой вёрстки нет
+*
+  box-sizing: border-box
+
+.header, .main
+  background-color: #FFF8F2
+
+@mixin poppins
+  font-family: 'Poppins', serif
+  font-style: normal
+  font-size: 18px
+
+@mixin inter
+  font-family: 'Inter', serif
+  font-style: normal
+  font-size: 18px
+  font-weight: 400
+
+
+
+.header
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: 400
+  line-height: 24px
+  color: #1C0E0D
+  @include poppins
+  @media only screen and (max-width: 376px)
+    display: flex
+    justify-content: space-between
+    width: 375px
+
+
+  &__logo
+    margin-top: 40px
+    padding-right: 240px
+    @media only screen and (max-width: 376px)
+      margin-top: 20px
+      padding-right: 0
+      margin-left: 24px
+      width: 135px
+      height: 30px
+
+
+  &__col
+    margin-top: 40px
+    display: flex
+    align-items: center
+    gap: 140px
+    @media only screen and (max-width: 376px)
+      width: 60px
+      height: 48px
+      background: url('../asserts/Menu_mobile.png') //кнопка не работает
+      gap: 0
+      margin-top: 20px
+      margin-right: 24px
+
+
+  &__nav
+    display: flex
+    gap: 48px
+    @media only screen and (max-width: 376px)
+      display: none
+
+
+  &__auth, __auth--link
+    padding: 16px 32px
+
+  &__auth
+    color: #FF553E
+
+  &__auth:hover, __auth--link:hover
+    color: #FFFFFF
+    background-color: #FF553E
+    border-radius: 34px
+
+  &__auth--link
+    font-weight: 500
+    line-height: 28px
+
+
+.main
+  margin: 0 auto
+  height: 950px
+  @media only screen and (max-width: 376px)
+    height: 589px
+    width: 375px
+
+.content
+  margin: 0 auto
+  text-align: center
+  padding-top: 120px
+  max-width: 1000px
+  @media only screen and (max-width: 376px)
+    padding-top: 80px
+  &__bigText
+    @media only screen and (max-width: 376px)
+      text-align: left
+      width: 297px
+  &__bigText__title
+    @include poppins
+    font-weight: 700
+    font-size: 64px
+    line-height: 90px
+    color: #1C0E0D
+    position: relative
+    z-index: 1
+    @media only screen and (max-width: 376px)
+      font-family: 'Poppins', serif
+      font-style: normal
+      font-weight: 700
+      font-size: 28px
+      line-height: 160%
+      text-transform: capitalize
+      margin-left: 24px
+      position: relative
+      z-index: 1
+
+
+
+  &__smallText
+    margin-top: 24px
+    @include inter
+    font-size: 20px
+    line-height: 36px
+    opacity: 0.8
+    @media only screen and (max-width: 376px)
+      font-size: 16px
+      line-height: 36px
+      color: #40201E
+      width: 244px
+      text-align: justify
+      margin-left: 24px
+
+
+  &__underText
+    @include poppins
+    margin-top: 44px
+    padding: 24px 40px
+    background: #FF553E
+    border-radius: 40px
+    font-weight: 500
+    line-height: 28px
+    color: #ffffff
+
+
+
+  &__alarmClock
+    position: absolute
+    top: 137px
+    left: 320px
+    width: 135.05px
+    height: 157.19px
+    z-index: 2
+    @media only screen and (max-width: 376px)
+      position: absolute
+      width: 90px
+      height: 90px
+      left: 250px
+      top: 95px
+
+
+  &__Vector1
+    position: absolute
+    width: 174px
+    height: 121px
+    top: 138px
+    left: 198px
+    z-index: 1
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__Shape
+    position: absolute
+    width: 176px
+    height: 35px
+    top: 360px
+    left: 575px
+    z-index: 1
+    @media only screen and (max-width: 376px)
+      position: absolute
+      width: 106px
+      height: 21px
+      left: 35px
+      top: 258px
+
+  &__Vector2
+    position: absolute
+    left: 520px
+    top: 750px
+    width: 53px
+    height: 62px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__Vector3
+    position: absolute
+    width: 119px
+    right: 500px
+    top: 560px
+    z-index: 1
+
+  &__Vector4
+    position: absolute
+    width: 87px
+    height: 122px
+    right: 300px
+    top: 170px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__Vector5
+    position: absolute
+    width: 84px
+    height: 134px
+    top: 100px
+    right: 0
+    @media only screen and (max-width: 376px)
+      position: absolute
+      width: 46px
+      height: 74px
+
+
+  &__Clipboard_Verified
+    position: absolute
+    width: 178px
+    height: 191px
+    right: 400px
+    top: 410px
+    z-index: 2
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__MobileScreen2
+    position: absolute
+    height: 926px
+    right: 0
+    top: 300px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__MobileScreen1
+    position: absolute
+    left: 28px
+    top: 328px
+    height: 680px
+    @media only screen and (max-width: 376px)
+      display: none
+
+.funfact
+  position: relative
+  height: 720px
+  background: url("../asserts/Background_funfact.png")
+  z-index: 1
+  top: -250px
+  @media only screen and (max-width: 376px)
+    top: 0
+    background: white
+    height: 2150px
+    width: 375px
+
+  &__expertises
+    display: flex
+    gap: 200px
+    justify-content: center
+    padding-top: 100px
+    padding-right: 350px
+    @media only screen and (max-width: 376px)
+      flex-direction: column
+      gap: 96px
+      padding-right: 0
+      padding-top: 0
+      align-items: center
+      margin-top: 48px
+
+  &__lineMobile
+    display: none
+    @media only screen and (max-width: 376px)
+      display: flex
+      border: 1px solid #1E0C3E
+      width: 180px
+      opacity: 0.2
+
+  &__activeUser,
+  &__totalDownload,
+  &__customer
+    @media only screen and (max-width: 376px)
+    display: flex
+    flex-direction: column
+    gap: 28px
+    align-items: center
+
+
+  &__activeUser__BigText,
+  &__totalDownload__BigText,
+  &__customer__BigText
+    @include poppins
+    font-weight: 600
+    font-size: 48px
+    line-height: 64px
+    color: #18063C
+
+
+
+  &__activeUser__smallText,
+  &__totalDownload__smallText,
+  &__customer__smallText
+    @include inter
+    line-height: 18px
+    opacity: 0.6
+
+  &__Vector1
+    position: absolute
+    width: 141px
+    height: 164px
+    left: 85px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__3dRocket
+    position: absolute
+    width: 197px
+    height: 183px
+    right: 350px
+    top: 350px
+    @media only screen and (max-width: 376px)
+      width: 100px
+      height: 92px
+      top: 750px
+      left: -20px
+
+
+  &__Shape
+    position: absolute
+    right: 760px
+    top: 430px
+    width: 176px
+    height: 35px
+    z-index: -1
+
+  &__shapeMobile
+    display: none
+    @media only screen and (max-width: 376px)
+      display: flex
+      width: 102px
+      height: 20px
+      position: absolute
+      right: 40px
+      top: 955px
+      z-index: -1
+
+  &__content
+    display: flex
+    justify-content: center
+    padding-top: 190px
+
+  &__text
+    display: flex
+    flex-direction: column
+    text-align: center
+    @media only screen and (max-width: 376px)
+      width: 310px
+      text-align: justify
+
+    &__bigText
+      padding-bottom: 20px
+      @include poppins
+      font-weight: 600
+      font-size: 48px
+      line-height: 70px
+      color: #18063C
+      text-transform: capitalize
+      @media only screen and (max-width: 376px)
+        font-size: 24px
+        line-height: 150%
+        text-align: center
+
+
+
+    &__smallText
+      @include inter
+      line-height: 36px
+      color: #404040
+      opacity: 0.8
+
+  &__cards
+    display: flex
+    gap: 32px
+    padding-top: 64px
+    @media only screen and (max-width: 376px)
+      flex-direction: column
+      align-items: center
+    &__present, &__reminder, &__complecation
+      display: flex
+      width: 350px
+      height: 240px
+      border-radius: 48px
+      &__shell
+        display: flex
+        flex-direction: column
+        &__icon
+          width: 150px
+          height: 150px
+        &__bigText, &__smallText
+          padding-left: 25px
+          text-align: left
+          color: #FFFFFF
+        &__bigText
+          @include poppins
+          font-weight: 600
+          font-size: 28px
+
+        &__smallText
+          @include inter
+          opacity: 0.8
+          padding-top: 10px
+
+    &__reminder
+      background-color: #7562E0
+    &__present
+      background-color: #70D0DC
+    &__complecation
+      background-color: #FA865F
+
+.analytics
+  position: relative
+  height: 1000px
+  background-color: #ffffff
+  display: flex
+  flex-direction: row-reverse
+  @media only screen and (max-width: 376px)
+    width: 375px
+  &__content
+    margin-top: 75px
+    margin-right: 200px
+    width: 568px
+    height: 720px
+    display: flex
+    flex-direction: column
+    gap: 48px
+    justify-content: center
+    z-index: 1
+    @media only screen and (max-width: 376px)
+      width: 376px
+      margin-right: 0
+      align-items: center
+
+
+
+    &__automatic, &__customizable, &__statistic, &__text
+      position: relative
+      right: 100px
+      @media only screen and (max-width: 376px)
+        right: 0
+
+    &__shape
+      position: absolute
+      width: 176px
+      height: 35px
+      top: 110px
+      right: 430px
+      @media only screen and (max-width: 376px)
+        display: none
+    &__shapeMobile
+      display: none
+      @media only screen and (max-width: 376px)
+        display: flex
+        width: 116px
+        height: 23px
+        position: absolute
+        left: 0
+        top: 12px
+        z-index: -1
+
+    &__objects
+      position: absolute
+      left: 0
+      width: 940px
+      height: 885px
+      @media only screen and (max-width: 376px)
+        width: 386px
+        height: 363px
+        position: relative
+        left: -36px
+    &__text
+      display: flex
+      flex-direction: column
+      @media only screen and (max-width: 376px)
+        align-items: center
+
+
+.analytics__titleText
+  padding-bottom: 20px
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 68px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 150%
+    width: 311px
+
+.analytics__underText
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    font-size: 16px
+    line-height: 180%
+    width: 311px
+
+.analytics__content__automatic,
+.analytics__content__customizable,
+.analytics__content__statistic
+  width: 477px
+  height: 116px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  @media only screen and (max-width: 376px)
+    width: 309px
+    height: 82px
+    gap: 10px
+.automatic__icon1,
+.automatic__icon2
+  width: 88px
+  height: 88px
+  margin-right: 31px
+  @media only screen and (max-width: 376px)
+    width: 56px
+    height: 56px
+    margin-right: 0
+.automatic__icon3 //если добавить margin-right: 30px, то справо повявиться больше пространства, чем в icon1 and icon2
+  width: 88px
+  height: 88px
+  @media only screen and (max-width: 376px)
+    width: 56px
+    height: 56px
+.automatic__titleText,
+.customizable__titleText,
+.statistic__titleText
+  @include poppins
+  font-weight: 600
+  font-size: 28px
+  line-height: 36px
+  color: #404040
+  @media only screen and (max-width: 376px)
+    font-size: 18px
+    line-height: 120%
+.automatic__underText,
+.customizable__underText,
+.statistic__underText
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    font-size: 14px
+    line-height: 180%
+
+.tracker
+  position: relative
+  height: 1000px
+  background: #F3FDFE
+  @media only screen and (max-width: 376px)
+    height: 1150px
+    width: 375px
+  &__image
+    position: absolute
+    width: 682px
+    height: 618px
+    right: 126px
+    top: 280px
+    @media only screen and (max-width: 376px)
+      display: none
+  &__SliceMobile
+    display: none
+    @media only screen and (max-width: 376px)
+      display: flex
+      width: 279px
+      height: 621px
+      position: absolute
+      top: 480px
+      left: 47px
+
+  &__3Dimage1
+    position: absolute
+    width: 140px
+    height: 286px
+    left: 0
+    top: 365px
+    @media only screen and (max-width: 376px)
+      display: none
+  &__3Dimage1Mobile
+    display: none
+    @media only screen and (max-width: 376px)
+      display: flex
+      height: 104px
+      position: absolute
+      right: 0
+      top: -35px
+
+
+  &__3Dimage2
+    position: absolute
+    width: 220px
+    height: 280px
+    right: 0
+    top: 0
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__shape
+    position: absolute
+    width: 176px
+    height: 35px
+    left: 588px
+    top: 175px
+    @media only screen and (max-width: 376px)
+      opacity: 0.4
+      width: 78px
+      height: 16px
+      left: 135px
+      top: 64px
+
+  &__vector1
+    position: absolute
+    width: 89px
+    height: 124px
+    top: 400px
+    left: 900px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__vector2
+    position: absolute
+    width: 89px
+    height: 124px
+    top: 630px
+    left: 315px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__content
+    position: absolute
+    top: 140px
+    left: 370px
+    width: 720px
+    display: flex
+    flex-direction: column
+    gap: 70px
+    @media only screen and (max-width: 376px)
+      top: 0
+      left: 0
+      gap: 24px
+      margin-top: 48px
+    &__title
+      display: flex
+      flex-direction: column
+      @media only screen and (max-width: 376px)
+        width: 252px
+        height: 72px
+.tracker__titleText
+  padding-bottom: 20px
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 70px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 150%
+    margin-left: 24px
+.tracker__underText
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    display: none
+
+.tracker__content__expenses
+  padding-left: 160px
+  @media only screen and (max-width: 376px)
+    padding-left: 0
+.tracker__content__time,
+.tracker__content__expenses,
+.tracker__content__budget
+  width: 464px
+  height: 116px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  gap: 48px
+  @media only screen and (max-width: 376px)
+    width: 307px
+    height: 82px
+    gap: 21px
+    margin-left: 24px
+
+.time__icon1,
+.expenses__icon2,
+.budget__icon3
+  width: 116px
+  height: 116px
+  @media only screen and (max-width: 376px)
+    width: 56px
+    height: 56px
+.time__text,
+.expenses__text,
+.budget__text
+  display: flex
+  flex-direction: column
+
+.time__titleText,
+.expenses__titleText,
+.budget__titleText
+  @include poppins
+  font-weight: 600
+  font-size: 28px
+  line-height: 52px
+  color: #404040
+  @media only screen and (max-width: 376px)
+    font-size: 18px
+    line-height: 120%
+.time__underText,
+.expenses__underText,
+.budget__underText
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    font-size: 14px
+    line-height: 180%
+
+
+
+
+.pricing
+  position: relative
+  height: 1100px
+  background: white
+  display: flex
+  justify-content: center
+  @media only screen and (max-width: 376px)
+    height: 1000px
+    width: 376px
+  &__hand
+    position: absolute
+    height: 332px
+    left: 0
+    top: 700px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__content
+    display: flex
+    width: 970px
+    margin-top: 80px
+    flex-direction: column
+    align-items: center
+    z-index: 1
+    @media only screen and (max-width: 376px)
+    &__shape
+      position: absolute
+      width: 176px
+      height: 35px
+      z-index: -1
+      top: 115px
+      right: 620px
+      @media only screen and (max-width: 376px)
+        display: none
+
+
+    &__shapeMobile
+      display: none
+      @media only screen and (max-width: 376px)
+        display: flex
+        width: 137px
+        height: 27px
+        position: absolute
+        left: 220px
+        top: 90px
+
+    &__3dIcon
+      position: absolute
+      z-index: -1
+      width: 223px
+      height: 296px
+      right: 370px
+      top: 340px
+      @media only screen and (max-width: 376px)
+        display: none
+    &__vector
+      position: absolute
+      width: 136px
+      height: 217px
+      z-index: -2
+      right: 340px
+      top: 450px
+      @media only screen and (max-width: 376px)
+        display: none
+
+    &__text
+      width: 650px
+      height: 126px
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      gap: 20px
+      @media only screen and (max-width: 376px)
+        width: 334px
+        height: 82px
+        gap: 10px
+
+
+.pricing__bigText
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 70px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 150%
+.pricing__smallText
+  @include inter
+  line-height: 36px
+  text-align: center
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    font-size: 16px
+    line-height: 36px
+.pricing__content__filter
+  margin-top: 48px
+  display: flex
+  flex-direction: row
+  align-items: center
+  gap: 20px
+  @include poppins
+  font-weight: 500
+  font-size: 24px
+  line-height: 28px
+  color: #404040
+  @media only screen and (max-width: 376px)
+    font-size: 18px
+
+
+// здесь ниже будут стили pricing__toggle и toggle__round
+.pricing__toggle
+  position: relative
+  display: inline-block
+  width: 84px
+  height: 40px
+  @media only screen and (max-width: 376px)
+    width: 55px
+    height: 26.19px
+.pricing__toggle input
+  opacity: 0
+  width: 0
+  height: 0
+
+.toggle
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(255, 85, 62, 0.2)
+  transition: .4s
+
+.toggle:before
+  position: absolute
+  content: ""
+  height: 30px
+  width: 30px
+  left: 7px
+  bottom: 6px
+  background-color: #FF553E
+  transition: .4s
+  @media only screen and (max-width: 376px)
+    width: 18px
+    height: 18px
+    bottom: 5px
+
+input:checked + .toggle
+  background-color: rgba(255, 85, 62, 0.2)
+
+
+input:focus + .toggle
+  box-shadow: 0 0 1px rgba(255, 85, 62, 0.2)
+
+input:checked + .toggle:before
+  -ms-transform: translateX(40px)
+  transform: translateX(40px)
+  @media only screen and (max-width: 376px)
+    -ms-transform: translateX(25px)
+    transform: translateX(25px)
+
+.toggle.round
+  border-radius: 34px
+
+
+.toggle.round:before
+  border-radius: 50%
+
+////
+
+
+.pricing__content__status
+  display: flex
+  margin-top: 70px
+  gap: 30px
+  @media only screen and (max-width: 376px)
+    flex-direction: column
+.pricing__free, .pricing__premium
+  width: 470px
+  height: 608px
+  border: 1px solid #FF553E
+  border-radius: 110px
+  display: flex
+  flex-direction: column
+  align-items: center
+  @media only screen and (max-width: 376px)
+    width: 327px
+    height: 288px
+    border-radius: 30px
+    align-items: flex-start
+
+
+.pricing__premium
+  background: #FF553E
+
+.pricing__freeTitle, .pricing__premiumTitle
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 100%
+  text-align: center
+  color: #404040
+  margin-top: 64px
+  margin-bottom: 56px
+  @media only screen and (max-width: 376px)
+    font-size: 20px
+    margin-top: 41px
+    margin-bottom: 29px
+    margin-left: 26px
+    width: 275px
+    height: 29px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.pricing__premiumTitle
+  color: white
+
+.pricing__freeCondition, .pricing__premiumCondition
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  @media only screen and (max-width: 376px)
+    gap: 16px
+    align-items: flex-start
+    margin-left: 26px
+.pricing__premiumCondition
+  @media only screen and (max-width: 376px)
+    opacity: 0.8
+
+.pricing__freeCondition__text, .pricing__premiumCondition__text
+  @include inter
+  font-weight: 600
+  font-size: 28px
+  line-height: 52px
+  @media only screen and (max-width: 376px)
+    font-weight: 400
+    font-size: 18px
+    line-height: 20px
+.pricing__freeCondition__text
+  color: #FF553E
+  opacity: 0.8
+.pricing__premiumCondition__text
+  color: white
+
+.pricing__freePrice, .pricing__premiumPrice
+  margin: 64px 0
+  @media only screen and (max-width: 376px)
+    display: none
+
+.pricing__freePriceMobile, .pricing__PremiumPriceMobile
+  display: none
+  @media only screen and (max-width: 376px)
+    display: flex
+    width: 115px
+    height: 29px
+
+
+
+
+.pricing__freePrice
+  width: 141px
+  height: 64px
+
+.pricing__premiumPrice
+  width: 183px
+  height: 64px
+.pricing__trialPeriod, .pricing__premiumPeriod
+  @include poppins
+  font-weight: 500
+  font-size: 18px
+  line-height: 28px
+  width: 240px
+  height: 76px
+  border-radius: 40px
+  @media only screen and (max-width: 376px)
+    margin-left: auto
+    margin-right: auto
+    margin-top: 30px
+
+
+
+.pricing__trialPeriod
+  background: #FF553E
+  color: white
+.pricing__premiumPeriod
+  background: white
+  color: #FF553E
+
+
+.trust
+  display: flex
+  flex-direction: row
+  height: 900px
+  background-color: #F8FEFE
+  gap: 100px
+  justify-content: center
+  align-items: center
+  @media only screen and (max-width: 376px)
+    height: 700px
+    background-color: white
+    gap: 0
+    flex-direction: column
+    width: 376px
+
+  &__tools
+    width: 799px
+    height: 651px
+    @media only screen and (max-width: 376px)
+      display: none
+  &__toolsMobile
+    display: none
+    @media only screen and (max-width: 376px)
+      display: flex
+      width: 258px
+
+
+  &__content
+    width: 525px
+    height: 396px
+    position: relative
+    z-index: 1
+    @media only screen and (max-width: 376px)
+      width: 323px
+    &__text
+      display: flex
+      flex-direction: column
+      gap: 20px
+      @media only screen and (max-width: 376px)
+        gap: 18px
+    &__shape
+      position: absolute
+      width: 176px
+      height: 35px
+      z-index: -1
+      right: 200px
+      top: 33px
+      @media only screen and (max-width: 376px)
+        width: 84px
+        height: 17px
+        opacity: 0.4
+        right: 130px
+        top: 15px
+
+.trust__title
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 70px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 140%
+    width: 225px
+    height: 68px
+    text-transform: capitalize
+
+.trust__underText
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    font-family: 'Nunito Sans', serif
+    font-size: 16px
+    line-height: 180%
+    color: #1C0E0D
+
+.get__started
+  width: 184px
+  height: 76px
+  margin-top: 48px
+  border: 1px solid #FF553E
+  border-radius: 40px
+  @media only screen and (max-width: 376px)
+    margin-top: 28px
+
+
+  &__text
+    @include poppins
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    color: #FF553E
+.get__started:hover
+  background-color: #FF553E
+  .get__started__text
+    color: white
+
+.clientSays
+  position: relative
+  height: 1000px
+  display: flex
+  justify-content: center
+  @media only screen and (max-width: 376px)
+    width: 376px
+    height: 650px
+
+  &__content
+    margin-top: 80px
+    margin-left: 24px
+    width: 998px
+    height: 565px
+    display: flex
+    flex-direction: column
+    gap: 60px
+    @media only screen and (max-width: 376px)
+      width: 375px
+      gap: 30px
+    &__text1
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+      @media only screen and (max-width: 376px)
+        width: 258px
+        height: 34px
+        align-items: flex-start
+    &__text2
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 48px
+  &__like
+    position: absolute
+    width: 220px
+    height: 225px
+    top: 38px
+    left: 56px
+    @media only screen and (max-width: 376px)
+      display: none
+
+  &__chat
+    position: absolute
+    width: 196px
+    height: 200px
+    bottom: 200px
+    left: 60px
+    @media only screen and (max-width: 376px)
+      display: none
+  &__emoji
+    position: absolute
+    width: 126px
+    height: 123px
+    bottom: 140px
+    right: 107px
+    @media only screen and (max-width: 376px)
+      display: none
+  &__vector1
+    position: absolute
+    width: 146px
+    height: 131px
+    left: 196px
+    top: 200px
+    z-index: -1
+    @media only screen and (max-width: 376px)
+      display: none
+  &__vector2
+    position: absolute
+    width: 94px
+    height: 110px
+    bottom: 87px
+    right: 68px
+    z-index: -1
+    @media only screen and (max-width: 376px)
+      display: none
+  &__shape
+    position: absolute
+    width: 176px
+    height: 35px
+    z-index: -1
+    top: 115px
+    left: 950px
+    @media only screen and (max-width: 376px)
+      display: none
+.clientSays__bigText1
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 70px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 140%
+    text-transform: capitalize
+.clientSays__shapeMobile
+  display: none
+  @media only screen and (max-width: 376px)
+    display: flex
+    position: absolute
+    width: 117px
+    height: 23px
+    right: 125px
+    top: 92px
+    z-index: -1
+.clientSays__mobileImages
+  display: none
+  @media only screen and (max-width: 376px)
+    display: flex
+.clientSays__roundedMobile
+  width: 170px
+  height: 144px
+.clientSays__likeMobile
+  width: 62px
+  height: 63px
+  position: absolute
+  left: 186px
+  top: 120px
+.clientSays__elementMobile
+  width: 70px
+  height: 80px
+  top: 200px
+  left: 200px
+  position: absolute
+.clientSays__chatMobile
+  width: 79px
+  height: 100px
+  position: absolute
+  right: 0
+  top: 200px
+
+.clientSays__smallText1
+  @include inter
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  @media only screen and (max-width: 376px)
+    display: none
+.clientSays__Rounded
+  width: 298px
+  height: 379px
+  @media only screen and (max-width: 376px)
+    display: none
+
+.clientSays__smallText2
+  @include inter
+  font-size: 20px
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+
+.clientSays__comment
+  display: flex
+  flex-direction: column
+  @media only screen and (max-width: 376px)
+    width: 327px
+    height: 145px
+  &__client
+    display: flex
+    flex-direction: column
+    gap: 20px
+    @media only screen and (max-width: 376px)
+      gap: 10px
+  &__smallText2
+    @include inter
+    font-size: 20px
+    line-height: 36px
+    color: #404040
+    opacity: 0.8
+    margin-bottom: 36px
+    @media only screen and (max-width: 376px)
+      font-family: 'Nunito Sans', serif
+      font-size: 16px
+      line-height: 180%
+      color: #1C0E0D
+      margin-bottom: 28px
+
+.clientSays__nameClient
+  @include inter
+  font-weight: 500
+  font-size: 24px
+  line-height: 24px
+  color: #38363C
+.clientSays__profClient
+  @include inter
+  font-weight: 500
+  line-height: 26px
+  color: #38363C
+  opacity: 0.7
+.clientSays__nav
+  margin-top: 28px
+  display: flex
+  flex-direction: row
+  gap: 10px
+  width: 102px
+  height: 12px
+  @media only screen and (max-width: 376px)
+    margin-top: 14px
+
+  &__rectangle
+    width: 36px
+    height: 12px
+    background: #FF553E
+    border-radius: 7px
+  &__ellipse
+    width: 12px
+    height: 12px
+    background: rgba(255, 85, 62, 0.2)
+    border-radius: 10px
+
+
+.getIt
+  position: relative
+  background: #FFF8F2
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: row
+  z-index: 1
+  @media only screen and (max-width: 376px)
+    height: 500px
+    width: 376px
+  &__content
+    width: 700px
+    height: 166px
+    display: flex
+    flex-direction: column
+    gap: 48px
+    margin-bottom: 100px
+    @media only screen and (max-width: 376px)
+      height: 350px
+      margin-left: 24px
+      margin-top: 48px
+    &__text
+      display: flex
+      flex-direction: column
+      gap: 24px
+      @media only screen and (max-width: 376px)
+        gap: 16px
+
+
+.getIt__bigText
+  @include poppins
+  font-weight: 600
+  font-size: 48px
+  line-height: 70px
+  color: #18063C
+  @media only screen and (max-width: 376px)
+    font-size: 24px
+    line-height: 140%
+    width: 225px
+    text-transform: capitalize
+    color: #332C5C
+.getIt__smallText
+  @include inter
+  font-size: 20px
+  line-height: 36px
+  color: #404040
+  opacity: 0.8
+  width: 559px
+
+  @media only screen and (max-width: 376px)
+    font-size: 16px
+    line-height: 30px
+    width: 314px
+    height: 90px
+.getIt__content__button
+  display: flex
+  flex-direction: row
+  gap: 20px
+  @media only screen and (max-width: 376px)
+    flex-direction: column
+    gap: 16px
+
+.getIt__appStore, .getIt__googlePlay
+  width: 179px
+  height: 73px
+  border-radius: 40px
+  padding: 24px 40px
+  &__imgAppStore, &__imgGooglePlay
+    width: 99px
+    height: 25px
+.getIt__appStore
+  background: #FF553E
+.getIt__googlePlay
+  border: 1px solid #FF553E
+.getIt__mobileScreen
+  width: 505px
+  height: 816px
+  margin-top: 100px
+  @media only screen and (max-width: 376px)
+    display: none
+
+.getIt__lefthand
+  position: absolute
+  width: 350px
+  left: 0
+  top: 70px
+  @media only screen and (max-width: 376px)
+    display: none
+.getIt__righthand
+  position: absolute
+  right: 0
+  width: 332px
+  height: 218px
+  @media only screen and (max-width: 376px)
+    display: none
+.getIt__shape
+  position: absolute
+  width: 176px
+  height: 35px
+  left: 600px
+  top: 360px
+  z-index: -1
+  @media only screen and (max-width: 376px)
+    display: none
+.getIt__rightHandMobile
+  display: none
+  @media only screen and (max-width: 376px)
+    display: flex
+    width: 126px
+    height: 60px
+    position: absolute
+    right: 0
+    top: 240px
+.getIt__shapeMobile
+  display: none
+  @media only screen and (max-width: 376px)
+    width: 70px
+    height: 14px
+    z-index: -1
+    position: absolute
+    right: 119px
+    top: 62px
+
+//футер
+.footer
+  height: 341px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  @media only screen and (max-width: 376px)
+    width: 376px
+    height: 600px
+    align-items: flex-start
+    margin-left: 24px
+
+  &__onePart
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 1100px
+    align-items: center
+    @media only screen and (max-width: 376px)
+      flex-direction: column
+      width: 243px
+      gap: 50px
+      align-items: flex-start
+    &__menu
+      display: flex
+      flex-direction: row
+      gap: 48px
+      @include poppins
+      font-weight: 400
+      font-size: 18px
+      line-height: 24px
+      color: #1C0E0D
+      @media only screen and (max-width: 376px)
+        flex-direction: column
+        gap: 28px
+        order: 3
+    &__socials
+      display: flex
+      flex-direction: row
+      gap: 44px
+      @media only screen and (max-width: 376px)
+        order: 2
+    &__logo
+      width: 134px
+      height: 30px
+      @media only screen and (max-width: 376px)
+        order: 1
+.footer__socials__icon,
+.footer__socials__iconTwitter,
+.footer__socials__iconTwitterMobile
+  width: 15px
+  height: 16px
+
+.footer__socials__iconFacebook
+  width: 8px
+  height: 16px
+.footer__socials__iconTwitter
+  @media only screen and (max-width: 376px)
+    display: none
+.footer__socials__iconTwitterMobile
+  display: none
+  @media only screen and (max-width: 376px)
+    display: flex
+    width: 17px
+
+.footer__line
+  margin-top: 60px
+  width: 1100px
+  left: 376px
+  top: 7849px
+  opacity: 0.2
+  border: 1px solid #404040
+  background: black
+  @media only screen and (max-width: 376px)
+    display: none
+
+.footer__twoPart
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 1100px
+  margin-top: 40px
+  @include inter
+  line-height: 24px
+  color: #404040
+  @media only screen and (max-width: 376px)
+    flex-direction: column
+    width: 375px
+    gap: 24px
+    font-size: 16px
+    line-height: 24px
+    opacity: 0.5
+    height: 120px
+
+
+  &__left
+    display: flex
+    gap: 108px
+    @media only screen and (max-width: 376px)
+      gap: 24px
+      flex-direction: column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
